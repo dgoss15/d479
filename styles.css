@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: white;
+    color: #333;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd; /* Adds a subtle border to separate header */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Navbar Styling */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #42a5f5; /* Light blue background for the navbar */
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffe082;
+}
+
+/* Hero Section */
+.hero {
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Framed Image Below Hero Heading */
+.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 20px auto;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Section Styling */
+.attraction-section,
+.accommodation-section,
+.dining-section,
+.transportation-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.attraction-item,
+.accommodation-item,
+.dining-item,
+.transportation-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.attraction-item.left,
+.accommodation-item.left,
+.dining-item.left,
+.transportation-item.left {
+    flex-direction: row; /* Image on the left */
+}
+
+.attraction-item.right,
+.accommodation-item.right,
+.dining-item.right,
+.transportation-item.right {
+    flex-direction: row-reverse; /* Image on the right */
+}
+
+.attraction-item img,
+.accommodation-item img,
+.dining-item img,
+.transportation-item img {
+    width: 45%; /* Large thumbnails */
+    height: 300px; /* Keep consistent height */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.text-box {
+    flex-grow: 1; /* Text box fills the remaining space */
+    max-width: 55%; /* Matches the image */
+}
+
+.text-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer .social-links img {
+    width: 24px; /* Set a fixed width for the icons */
+    height: 24px; /* Set a fixed height for the icons */
+    display: inline-block;
+    filter: brightness(0) invert(1); /* Makes icons white for dark backgrounds */
+    transition: transform 0.3s, filter 0.3s; /* Smooth hover animation */
+}
+
+footer .social-links img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    filter: brightness(0.8) invert(0.9); /* Slight color change */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .attraction-item,
+    .accommodation-item,
+    .dining-item,
+    .transportation-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .attraction-item img,
+    .accommodation-item img,
+    .dining-item img,
+    .transportation-item img {
+        width: 100%; /* Full-width images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .text-box {
+        max-width: 100%; /* Text box takes full width */
+    }
+}
